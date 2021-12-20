@@ -5,7 +5,7 @@ This repo is an implementation of Geographically Weighted Regression in R to ext
 
 ## Data
 This study used a restricted dataset so you need to prepare your own data. Some useful information:
-- The Sentinel-2 Level-2A images are open and accessible through the [Copernicus Open Access Hub](https://scihub.copernicus.eu/).
+- The Sentinel-2 images are open and accessible through the [Copernicus Open Access Hub](https://scihub.copernicus.eu/).
 - The National Oceanic and Atmospheric Administration (NOAA) Bathymetric Data Viewer provides [MBES](https://maps.ngdc.noaa.gov/viewers/bathymetry/) and [LiDAR](https://coast.noaa.gov/dataviewer/\#/lidar/search/) bathymetry data sets.
 
 ## Directory tree structure
