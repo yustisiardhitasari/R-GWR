@@ -3,9 +3,9 @@
 # Bidang Penelitian - Badan Informasi Geospasial
 
 # Setting
-setwd("D:/SDB/run_morotai/df_extract")
-f.path <- "morotaiRGB_SP7_171010"
-f.aoi <- "aoi2b"
+setwd("/home/rgwr/df_extract")
+f.path <- "imgRGB_S2_170809"
+f.aoi <- "aoi"
 f.trn <- "trn75"
 
 # Import packages
@@ -15,7 +15,7 @@ library(shapefiles)
 
 # Read file
 img.x	<- stack(readGDAL(paste("../img_crct/", f.path, "_", f.aoi, "_crctm.tif", sep="")))
-df.depth <- read.table(paste("../depthref/morotai_sbes_", f.aoi, "_df", f.trn, ".csv", sep=""), header=TRUE, sep=",")
+df.depth <- read.table(paste("../depthref/sbes_", f.aoi, "_df", f.trn, ".csv", sep=""), header=TRUE, sep=",")
 
 # Extract depth reference and pixel value
 df.ext	<- as.data.frame(extract(x = img.x, y = df.depth[,1:2], methods = 'bilinear'))

@@ -3,8 +3,8 @@
 # Bidang Penelitian - Badan Informasi Geospasial
 
 # Setting
-setwd("/home/bidlit01/SDB/run_morotai/scripts")
-f.path <- "morotaiRGB_L8_170809_aoi1"
+setwd("/home/rgwr/scripts")
+f.path <- "imgRGB_S2_170809_aoi"
 f.trn <- "trn25"
 
 # Import packages

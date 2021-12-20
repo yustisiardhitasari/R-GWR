@@ -3,10 +3,10 @@
 # Bidang Penelitian - Badan Informasi Geospasial
 
 # Setting
-setwd("D:/SDB/run_morotai/img_crct")
-f.path <- "morotaiRGB_K3_160606"
-f.aoi <- "aoi2"
-f.dwa <- "dwa7"
+setwd("/home/rgwr/img_crct")
+f.path <- "imgRGB_S2_170809"
+f.aoi <- "aoi"
+f.dwa <- "dwa"
 
 # Import packages
 library(raster)
@@ -24,12 +24,12 @@ img.g <- img.rgb.full[[2]]
 img.b <- img.rgb.full[[3]]
 
 # Crop aoi
-shp.aoi <- shapefile(paste("../shp/morotai_", f.aoi, ".shp", sep=""))
+shp.aoi <- shapefile(paste("../shp/", f.aoi, ".shp", sep=""))
 img.rgb <- crop(img.rgb.full, extent(shp.aoi))
 writeRaster(img.rgb, paste("../img/", f.path, "_", f.aoi, ".tif", sep=""))
 
 # Set deep water area (dwa)
-shp.dwa <- shapefile(paste("../shp/morotai_", f.dwa, ".shp", sep=""))
+shp.dwa <- shapefile(paste("../shp/", f.dwa, ".shp", sep=""))
 
 # Extract data raster dwa
 img.dwa	<- crop(img.rgb.full, extent(shp.dwa))
