@@ -1,7 +1,7 @@
 # R-GWR
  Geographically Weighted Regression in R
 
-This repo is an implementation of Geographically Weighted Regression in R to extract shallow water depths from multispectral images.
+This repo is an implementation of GWmodel package (Geographically Weighted Regression) in R to extract shallow water depths from multispectral images.
 
 ## Data
 This study used a restricted dataset so you need to prepare your own data. Some useful information:
